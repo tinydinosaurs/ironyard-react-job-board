@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Serif+Pro:400,700);
+@import 'variables';
+
+/********** global styles **********/
+
+body {
+	background: url('../assets/bg.png');
+	font-family: 'Source Serif Pro', serif;
+	margin: 0;
+}
+
+/***********************************
+			header styles
+/**********************************/
+header {
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: $color-main-bg;
+	padding: 1em 3em;
+	overflow: hidden;
+	border-top: 10px solid $color-dark-grey;
+	line-height: 4em;
+	
+	.logo-area img, 
+	.logo-area h1 {
+	float: left;
+	}
+
+	h1 {
+		margin: 0 1em 0 0.5em;
+		color: $color-main-detail;
+
+	}
+
+	nav {
+		float: left;
+	}
+
+	a {
+		font-weight: 700;
+		text-decoration: none;
+		color: $color-dark-grey;
+		text-transform: uppercase;
+		margin: 0 1em;
+	}
+}
+
+/***********************************
+			form styles
+/**********************************/
+
+form {
+	clear: both;
+	background-color: $color-main-bg;
+}
+
+
+
+
+
+
+
+
