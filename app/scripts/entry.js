@@ -13,8 +13,10 @@ const Container = React.createClass({
 	render: function() {
 		return (<div className="container">
 			<Header />
-			<FilterBox />
-			<JobPage />
+			<div className="main-content">
+				<FilterBox />
+				<JobPage />
+			</div>
 			<aside>
 				<InfoBox />
 				<CompanyBox />

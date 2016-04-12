@@ -7,11 +7,14 @@ const CompanyBox = React.createClass({
 		return (
 			<div className="company-box">
 				<h2>Company Information</h2>
+				<hr />
 				<div className="logo-box">
 					<img src={featuredLogo} />
 				</div>
-				<p className="featured-name">MaxPlay</p>
-				<p className="featured-location">Austin, TX</p>
+				<div className="company-info">
+					<p className="featured-name">MaxPlay</p>
+					<p className="featured-location">Austin, TX</p>
+				</div>
 			</div>
 			);
 
