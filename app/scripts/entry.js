@@ -5,8 +5,13 @@ import ReactDOM from 'react-dom';
 import Header from './components/header';
 import FilterBox from './components/filterBox';
 import JobPage from './components/jobPage';
-import InfoBox from './components/infoBox'
-import CompanyBox from './components/companyBox'
+import InfoBox from './components/infoBox';
+import CompanyBox from './components/companyBox';
+import PostingCollection from './collections/postingCollection'
+import unicornJobs from './unicornJobs'
+
+let jobPostings = new PostingCollection();
+
 
 
 const Container = React.createClass({
@@ -15,7 +20,7 @@ const Container = React.createClass({
 			<Header />
 			<div className="main-content">
 				<FilterBox />
-				<JobPage />
+				<JobPage jobPosts={this.props.jobData}/>
 			</div>
 			<aside>
 				<InfoBox />
@@ -25,4 +30,4 @@ const Container = React.createClass({
 	}
 });
 
-ReactDOM.render(<Container />, document.querySelector('main'));
+ReactDOM.render(<Container jobData={unicornJobs}/>, document.querySelector('main'));

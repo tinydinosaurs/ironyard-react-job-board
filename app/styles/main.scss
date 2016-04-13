@@ -174,18 +174,31 @@ aside {
 		font-weight: 400;
 		margin: 0;
 	}
+
+	.company-info {
+	text-align: center;
+	}
 }
 
 .logo-box {
 	background: url('../assets/featured.jpg') no-repeat;
 	background-size: contain;
 	text-align: center;
+	// position: relative
+
+	// .featured {
+	// width: 100%
+	// }
+
+	// .featured-logo {
+		// position: absolute;
+		// left: 25%;
+		// top: 60%;
+	// 	height: 90%
+	// 	width: 50%;
+	// }
 
 	img {margin-top: 5em;}
-}
-
-.company-info {
-	text-align: center;
 }
 
 .featured-name {

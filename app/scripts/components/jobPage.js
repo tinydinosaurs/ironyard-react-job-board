@@ -3,20 +3,24 @@ import JobRow from './jobRow'
 
 const JobPage = React.createClass({
 	render: function() {
-		let jobPosts = [
-				<JobRow key="1" />,
-				<JobRow key="2" />,
-				<JobRow key="3" />,
-				<JobRow key="4" />,
-				<JobRow key="5" />,
-				<JobRow key="6" />
-			];
-		return (
-			<div className="job-page">
-				{jobPosts}
-			</div>
-			);
-	}
+	 	
+		let jobRows = this.props.jobPosts.map((job, index, array) => {
+			return (
+				<JobRow 
+				date={job.date}
+				title={job.title}
+				company={job.company}
+				location={job.location}
+				description={job.description}
+				/>
+				)
+		});
+
+
+	 console.log(this.props);
+	 return (
+	 	<div>{jobRows}</div>
+	 	)}
 });
 
 export default JobPage
