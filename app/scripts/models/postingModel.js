@@ -14,7 +14,7 @@ const PostingModel = Backbone.Model.extend({
 		tags: []
 	},
 	idAttribute: 'id',
-	urlRoot: 'http://tiny-za-server.herokuapp.com/collections/job_posts_dl'
+	urlRoot: 'http://small-tiyfe.herokuapp.com/collections/jobs_for_unicorns/'
 });
 
 export default PostingModel

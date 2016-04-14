@@ -9,10 +9,13 @@ import InfoBox from './components/infoBox';
 import CompanyBox from './components/companyBox';
 import PostingCollection from './collections/postingCollection'
 import unicornJobs from './unicornJobs'
+import JobForm from './components/jobForm'
 
-let jobPostings = new PostingCollection();
+import App from './app.js';
 
 
+
+// let jobPostings = new PostingCollection();
 
 const Container = React.createClass({
 	render: function() {
@@ -21,6 +24,7 @@ const Container = React.createClass({
 			<div className="main-content">
 				<FilterBox />
 				<JobPage jobPosts={this.props.jobData}/>
+				<JobForm />
 			</div>
 			<aside>
 				<InfoBox />

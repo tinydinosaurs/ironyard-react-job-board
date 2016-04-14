@@ -1,23 +1,40 @@
 import React from 'react';
-import JobRow from './jobRow'
+import JobRow from './jobRow';
+import unicornJobPosts from './../collections/postingCollection';
+
 
 const JobPage = React.createClass({
+	
+	getInitialState: function() {
+		console.log('hi?');
+		return {unicornJobs: []}
+	},
+
+	componentDidMount: function() {
+		unicornJobPosts.on('add', () => {
+			this.setState({unicornJobs: unicornJobPosts})
+		});
+		unicornJobPosts.fetch();
+	},
+
 	render: function() {
 	 	
-		let jobRows = this.props.jobPosts.map((job, index, array) => {
+		const jobRows = unicornJobPosts.map((job, index, array) => {
 			return (
 				<JobRow 
-				date={job.date}
-				title={job.title}
-				company={job.company}
-				location={job.location}
-				description={job.description}
+				key={job.get('_id')}
+				date={job.get('date')}
+				title={job.get('title')}
+				company={job.get('company')}
+				location={job.get('location')}
+				description={job.get('description')}
+				tags={job.get('tags')}
 				/>
 				)
 		});
 
 
-	 console.log(this.props);
+	 // console.log(this.props);
 	 return (
 	 	<div>{jobRows}</div>
 	 	)}
