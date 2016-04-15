@@ -12,7 +12,7 @@ const FilterBox = React.createClass({
 					<label htmlFor="location">Location</label>			
 					<input type="text" id="location" placeholder="location" />
 				</div>
-				<button type="submit">Search</button>
+				<button>Search</button>
 			</form>
 		);
 	}

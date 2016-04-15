@@ -34,4 +34,4 @@ const Container = React.createClass({
 	}
 });
 
-ReactDOM.render(<Container jobData={unicornJobs}/>, document.querySelector('main'));
+ReactDOM.render(<Container jobData={JobForm}/>, document.querySelector('main'));

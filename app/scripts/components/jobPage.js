@@ -6,7 +6,6 @@ import unicornJobPosts from './../collections/postingCollection';
 const JobPage = React.createClass({
 	
 	getInitialState: function() {
-		console.log('hi?');
 		return {unicornJobs: []}
 	},
 
